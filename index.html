@@ -1,98 +1,184 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <title>Inicio</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>Hola mundo!!!!</h1>
     <h2>Sub 1</h2>
     <h3>Sub 2</h3>
     <h4>Sub 3</h4>
-    <p>
-        Esto es un parrafo.....
-    </p>
-    <br>
-    <p>
-        Esto es un <b>parrafo.....</b>
-    </p>
+    <p>Esto es un parrafo.....</p>
+    <br />
+    <p>Esto es un <b>parrafo.....</b></p>
     <!--
     El comentario    
     -->
     <a href="https://www.uniboyaca.edu.co" target="_blank">Ir a Uniboyaca</a>
-    <img 
-    src="https://cdn-icons-png.flaticon.com/512/919/919827.png" 
-    alt="HTML"
-    width="250"
-    height="250"
-    >
+    <img
+      src="https://cdn-icons-png.flaticon.com/512/919/919827.png"
+      alt="HTML"
+      width="250"
+      height="250"
+    />
 
     <ol>
-        <li>Objeto</li>
-        <li>Objeto</li>
-        <li>Objeto</li>
-        <li>Objeto</li>
+      <li>Objeto</li>
+      <li>Objeto</li>
+      <li>Objeto</li>
+      <li>Objeto</li>
     </ol>
     <ul>
-        <li>Objeto</li>
-        <li>Objeto</li>
-        <li>Objeto</li>
-        <li>Objeto</li>
+      <li>Objeto</li>
+      <li>Objeto</li>
+      <li>Objeto</li>
+      <li>Objeto</li>
     </ul>
     <dl>
-        <dt>Objeto</dt>
-        <dd>Descripción 1</dd>
-        <dt>Objeto</dt>
-        <dd>Descripción 2</dd>
-        <dt>Objeto</dt>
-        <dd>Descripción 3</dd>
+      <dt>Objeto</dt>
+      <dd>Descripción 1</dd>
+      <dt>Objeto</dt>
+      <dd>Descripción 2</dd>
+      <dt>Objeto</dt>
+      <dd>Descripción 3</dd>
     </dl>
 
     <table border="1">
-        <tr>
-            <td>Celda 11</td>
-            <td>Celda 12</td>
-            <td>Celda 13</td>
-        </tr>
-        <tr>
-            <td>Celda 21</td>
-            <td>Celda 22</td>
-            <td>Celda 23</td>
-        </tr>
-        <tr>
-            <td colspan="2">Celda 31</td>
-            <td rowspan="2">Celda 32</td>
-        </tr>
-        <tr>
-            <td>Celda 41</td>
-            <td>Celda 42</td>
-        </tr>
+      <tr>
+        <td>Celda 11</td>
+        <td>Celda 12</td>
+        <td>Celda 13</td>
+      </tr>
+      <tr>
+        <td>Celda 21</td>
+        <td>Celda 22</td>
+        <td>Celda 23</td>
+      </tr>
+      <tr>
+        <td colspan="2">Celda 31</td>
+        <td rowspan="2">Celda 32</td>
+      </tr>
+      <tr>
+        <td>Celda 41</td>
+        <td>Celda 42</td>
+      </tr>
     </table>
     <table border="1">
-        <thead>
-            <tr>
-                <th>Head 1</th>
-                <th>Head 2</th>
-                <th>Head 3</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Celda 11</td>
-                <td>Celda 12</td>
-                <td>Celda 13</td>
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <td colspan="3">Fin</td>
-            </tr>
-        </tfoot>
+      <thead>
+        <tr>
+          <th>Head 1</th>
+          <th>Head 2</th>
+          <th>Head 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Celda 11</td>
+          <td>Celda 12</td>
+          <td>Celda 13</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3">Fin</td>
+        </tr>
+      </tfoot>
     </table>
-
-
-</body>
-
+    <br />
+    <div>
+      <p>Contenido.....</p>
+    </div>
+    <section>
+      <p>Contenido.....</p>
+    </section>
+    <article>
+      <p>Contenido.....</p>
+    </article>
+    <main>
+      <p>Contenido.....</p>
+    </main>
+    <header>
+      <p>Contenido.....</p>
+    </header>
+    <footer>
+      <p>Contenido.....</p>
+    </footer>
+    <nav>
+      <ul>
+        <li>
+          <a href="#">Inicio</a>
+        </li>
+        <li>
+          <a href="#">Nosotros</a>
+        </li>
+        <li>
+          <a href="#">Contactos</a>
+        </li>
+      </ul>
+    </nav>
+    <br />
+    <form>
+      <fieldset>
+        <legend>Datos del usuario</legend>
+        <label>Nombre:</label>
+        <input
+          type="text"
+          name="nombreInp"
+          maxlength="10"
+          placeholder="Ingrese el nombre"
+          value=""
+          required
+        />
+        <label>Contrasena:</label>
+        <input type="password" name="contrasena" required>
+        <label>Email</label>
+        <input type="email" name="email">
+        <br>
+        <label>Edad:</label>
+        <input type="number" name="edad" min="18" max="115">
+        <label>Color favorito:</label>
+        <input type="color" name="colorfav">
+        <label>Fecha:</label>
+        <input type="date" name="fecha">
+        <label>Fecha hora:</label>
+        <input type="datetime-local" name="fechaHora">
+        <br>
+        <label>Hora</label>
+        <input type="time" name="hora">
+        <label>Opciones:</label>
+        <label>
+            <input type="radio" name="optRadio" value="1" checked>Opt 1
+        </label>
+        <label>
+            <input type="radio" name="optRadio" value="2">Opt 2
+        </label>
+        <label>
+            <input type="radio" name="optRadio" value="3">Opt 3
+        </label>
+        <br>
+        <label>Opciones 2:</label>
+        <label>
+            <input type="checkbox" name="optCheckA" checked>Opt 1
+        </label>
+        <label>
+            <input type="checkbox" name="optCheckB">Opt 2
+        </label>
+        <label>
+            <input type="checkbox" name="optCheckC">Opt 3
+        </label>
+        <br>
+        <label>Ciudad:</label>
+        <select name="ciudad">
+            <option value="1">Tunja</option>
+            <option value="2">Duitama</option>
+            <option value="3" selected>Sogamoso</option>
+        </select>
+      </fieldset>
+      <br>
+      <input type="submit" value="Aceptar">
+      <button type="submit">Aceptar</button>
+    </form>
+  </body>
 </html>
