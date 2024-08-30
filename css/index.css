@@ -21,3 +21,32 @@
     padding-inline-start: 4px;
     padding-inline-end: 10px;
 }
+
+.text{
+    color: #123bf1;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration: overline;
+    text-decoration: line-through;
+    text-decoration-line: line-through;
+    text-decoration-color: #ff0000;
+    text-decoration-style: wavy;
+    text-decoration-thickness: 2px;
+    /*text-decoration: none;*/
+    text-transform: uppercase;
+    text-transform: lowercase;
+    text-transform: capitalize;
+    /* text-transform: none; */
+    text-indent: 12px;
+    letter-spacing: 10px;
+    line-height: 50px;
+    word-spacing: 12px;
+    white-space: nowrap;
+    text-shadow: 4px 4px 6px #ff0000, 6px 0px 3px #8a2be2;
+
+    font-size: 30px;
+    font-weight: lighter;
+    font-style: italic;
+    font-family: 'Courier New', Courier, monospace;
+    font-family: "Lobster", sans-serif;
+}
