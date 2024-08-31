@@ -1,0 +1,36 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+main{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 80px 80px auto 100px;
+    grid-template-areas: "h . n n"
+    "h s s s"
+    "h s s s"
+    ". pepito pepito pepito";
+}
+
+header{
+    background-color: #00ffff;
+    grid-area: h;
+}
+
+nav{
+    background-color: #ff6347;
+    grid-area: n;
+}
+
+section{
+    background-color: #00ff15;
+    grid-area: s;
+}
+
+footer{
+    background-color: #606060;
+    grid-area: pepito;
+}
