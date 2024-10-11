@@ -83,15 +83,34 @@ foreach ($numeros as $x => $n) {
     echo '<br>';
 }
 
-function saludar($nombre){
+function saludar($nombre)
+{
     echo '<br>';
     echo "Hola $nombre";
     echo '<br>';
 }
 saludar('Juanita');
 
-function saludo ($nombre){
+function saludo($nombre)
+{
     return "Hola $nombre";
 }
 
 echo saludo('Pepe');
+
+$a = [
+    'nombre' => 'Pepe.....',
+    'edad' => 29,
+    'otros' => []
+];
+
+echo $a['nombre'];
+echo '<br>';
+foreach($a as $key=>$value){
+    echo "$key: $value";
+    echo '<br>';
+}
+echo '<script>';
+echo $a['nombre'];
+echo '  alert("Hola mundo!!!!!")';
+echo '</script>';
