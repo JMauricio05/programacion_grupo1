@@ -20,10 +20,14 @@ class ContactosView
         $contactos = $this->contactosController->allContactos();
         if (count($contactos) > 0) {
             foreach ($contactos as $contacto) {
+                $id = $contacto->get('id');
                 $rows .= '<tr>';
                 $rows .= '  <td>' . $contacto->get('nombre') . '</td>';
                 $rows .= '  <td>' . $contacto->get('email') . '</td>';
                 $rows .= '  <td>' . $contacto->get('telefono') . '</td>';
+                $rows .= '  <td>';
+                $rows .= '      <a href="formularioContacto.php?cod=' . $id . '">Modificar</a>';
+                $rows .= '  </td>';
                 $rows .= '</tr>';
             }
         } else {
@@ -44,5 +48,17 @@ class ContactosView
         $table .= ' </tbody>';
         $table .= '</table>';
         return $table;
+    }
+
+    function getMsgConfirmarContacto($datosFormulario)
+    {
+        $datosGuardados = empty($datosFormulario['cod'])
+            ? $this->contactosController->newContacto($datosFormulario)
+            : $this->contactosController->updateContacto($datosFormulario);
+        if ($datosGuardados) {
+            return '<P>Datos del contacto guardados</P>';
+        } else {
+            return '<P>No se pudo guardar los datos del contacto</P>';
+        }
     }
 }
