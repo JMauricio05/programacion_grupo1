@@ -28,6 +28,9 @@ class ContactosView
                 $rows .= '  <td>';
                 $rows .= '      <a href="formularioContacto.php?cod=' . $id . '">Modificar</a>';
                 $rows .= '  </td>';
+                $rows .= '  <td>';
+                $rows .= '      <button onClick="onDeleteContacto(' . $id . ')">Eliminar</button>';
+                $rows .= '  </td>';
                 $rows .= '</tr>';
             }
         } else {
@@ -59,6 +62,16 @@ class ContactosView
             return '<P>Datos del contacto guardados</P>';
         } else {
             return '<P>No se pudo guardar los datos del contacto</P>';
+        }
+    }
+
+    function getMsgEliminarContacto($id)
+    {
+        $datoEliminado = $this->contactosController->deleteContacto($id);
+        if ($datoEliminado) {
+            return '<P>Datos del contacto borrados</P>';
+        } else {
+            return '<P>No se pudo borrar los datos del contacto</P>';
         }
     }
 }

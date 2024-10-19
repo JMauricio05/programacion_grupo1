@@ -1,0 +1,57 @@
+.modal {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal .confirmModal {
+  border: 1px solid #000;
+  padding: 16px;
+  background-color: #fff;
+
+  width: 600px;
+}
+
+.modal .confirmModal form {
+  display: grid;
+  grid-template-areas:
+    ". closeBtn"
+    "msg msg"
+    "okBtn notBtn";
+}
+
+.modal .confirmModal form .closeBtn {
+  grid-area: closeBtn;
+  width: 36px;
+  margin: 8px;
+}
+
+.modal .confirmModal form .msg {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bolder;
+  margin: 8px;
+  grid-area: msg;
+}
+
+.modal .confirmModal form .okBtn {
+  grid-area: okBtn;
+  width: 90%;
+  margin: 8px;
+}
+
+.modal .confirmModal form .notBtn {
+  grid-area: notBtn;
+  width: 90%;
+  margin: 8px;
+}
+
+.ocultarModal {
+  display: none;
+}

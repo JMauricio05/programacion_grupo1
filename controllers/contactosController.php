@@ -29,4 +29,10 @@ class ContactosController{
         $contacto->set('email', $datos['email']);
         return $contacto->update();
     }
+
+    function deleteContacto($id){
+        $contacto = new Contacto();
+        $contacto->set('id', $id);
+        return $contacto->delete();
+    }
 }

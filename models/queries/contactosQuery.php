@@ -25,7 +25,8 @@ class ContactosQuery
         return "select * from contactos where id=$id";
     }
 
-    static function update($contacto){
+    static function update($contacto)
+    {
         $id = $contacto->get('id');
         $nombre = $contacto->get('nombre');
         $telefono = $contacto->get('telefono');
@@ -36,5 +37,11 @@ class ContactosQuery
         $sql .= "email='$email' ";
         $sql .= " where id=$id";
         return $sql;
+    }
+
+    static function delete($contacto)
+    {
+        $id = $contacto->get('id');
+        return "delete from contactos where id=$id";
     }
 }
