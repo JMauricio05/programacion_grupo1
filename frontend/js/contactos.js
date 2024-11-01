@@ -1,5 +1,6 @@
 const URL_ENDPOINT = "http://127.0.0.1:8000/api/app";
 const table = document.getElementById("contactos");
+const contactoForm = document.forms["contactoForm"];
 let contactos = [];
 //fetch(`${URL_ENDPOINT}/contactos`)
 const leerContactos = () => {
@@ -33,3 +34,22 @@ const leerContactos = () => {
     });
 };
 leerContactos();
+
+contactoForm.addEventListener("submit", (ev) => {
+  ev.preventDefault();
+  fetch(URL_ENDPOINT + "/contacto", {
+    method: "post",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      nombre: contactoForm["nombre"].value,
+      email: contactoForm["email"].value,
+      telefono: contactoForm["telefono"].value,
+    }),
+  })
+    .then((response) => response.json())
+    .then((body) => {
+      leerContactos();
+    });
+});
